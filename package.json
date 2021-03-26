@@ -1,0 +1,36 @@
+{
+  "name": "compress-image-s3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "deploy": "tsc && .\\deploy\\deploy-compress.bat\n",
+    "test": "ts-node ./src/ImageCompress.ts",
+    "setup-backet": "ts-node ./setup/setup-backet.ts",
+    "lint": "eslint src/**/*.ts",
+    "format": "eslint src/**/*.ts --fix",
+    "clear-node_modules": "rimraf ./**/node_modules"
+  },
+  "keywords": [],
+  "author": "Ulibka68",
+  "license": "ISC",
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.9.0",
+    "dotenv": "^8.2.0",
+    "sharp": "^0.27.2"
+  },
+  "devDependencies": {
+    "@aws-sdk/types": "^3.6.1",
+    "@types/node": "^14.14.35",
+    "@types/sharp": "^0.27.1",
+    "@typescript-eslint/eslint-plugin": "^4.18.0",
+    "@typescript-eslint/parser": "^4.18.0",
+    "eslint": "^7.22.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "prettier": "^2.2.1",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.3"
+  }
+}
